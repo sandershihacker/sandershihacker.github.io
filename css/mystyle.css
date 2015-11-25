@@ -6,40 +6,61 @@
 margin:0;
 }
 .main{
-background-image: url("../Source/mainbg.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment:fixed;
+    background-image: url("../Source/mainbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
 }
 .bike{
-background-image: url("../Source/bikebg.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment:fixed;
+    background-image: url("../Source/bikebg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
 }
 .cube{
-background-image: url("../Source/cubebg.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment:fixed;
+    background-image: url("../Source/cubebg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
 }
 .music{
-background-image: url("../Source/musicbg.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment:fixed;
+    background-image: url("../Source/musicbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
 }
 .coding{
-background-image: url("../Source/codebg.jpg");
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment:fixed;
+    background-image: url("../Source/codebg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
 }
 body{
-height:100%;
-background-color: #efefef;
-color: #FFF;
-font-family:arial;
+    height:100%;
+    background-color: #efefef;
+    color: #FFF;
+    font-family:arial;
+}
+.cv-button a:link, .cv-button a:visited{
+    color:#606060;
+    border-color:#606060;
+    display: block;
+    width:180px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5px;
+    font-family: arial;
+    transition: background 0.5s;
+    transition: color 0.3s;
+}
+.cv-button{
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    width: 190px;
+}
+.cv-button a:hover{
+    color:#ffffff;
 }
 .button a:link,.button a:visited{
     display: block;
@@ -72,7 +93,7 @@ font-family:arial;
 	font-family:arial;
 	transition:background 0.5s;
 }
-.button a:hover,
+.cv-button a:hover, .button a:hover,
 .langbutton a:hover{
     background:rgba(0,0,0,0.5);
 }
