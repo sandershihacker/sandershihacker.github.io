@@ -27,8 +27,7 @@ div.my-parallax {
     width: 200px;
     height: 200px;
     background-image: url("../src/profile.jpg");
-    background-size: 350px 350px;
-    background-position: 50% 30%;
+    background-size: 200px 200px;
     border-radius: 50%;
     border: 6px solid #dddddd;
     margin-left: auto;
@@ -65,10 +64,10 @@ nav ul li:hover {
 
 /*Navigation bar active link*/
 li.myActive {
-    background-color: #ffa000;  
+    background-color: #ffa000;
 }
 li.myActive a {
-    color: #565656;             
+    color: #565656;
 }
 
 /* Text */
