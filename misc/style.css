@@ -11,3 +11,8 @@ body {
 .main {
     flex: 1 0 auto;
 }
+
+.text-block {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
