@@ -1,0 +1,314 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/*Parallax height*/
+.parallax-container {
+    height: 300px;
+}
+div.my-parallax {
+    height: 160px;
+}
+
+/*Main page parallax text style*/
+.ttext {
+    font-weight: bold;
+    text-shadow: 3px 3px 5px #404040;
+}
+
+/*Home page profile picture circle*/
+.profile-picture {
+    width: 200px;
+    height: 200px;
+    background-image: url("../src/profile.jpg");
+    background-size: 200px 200px;
+    border-radius: 50%;
+    border: 6px solid #dddddd;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*To center profile picture in container*/
+.front-page-picture {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*To fix main page profile picture and text alignment*/
+@media only screen and (max-width: 600px) {
+    .parallax-container {
+        height: 350px;
+    }
+    .title-text p{
+        text-align: center;
+    }
+}
+
+/*Text color of navigation bar*/
+nav ul a {
+    color: #ffa000;
+}
+nav ul a:hover {
+    color: #565656;
+}
+
+/*Background color of links when on hover*/
+nav ul li:hover {
+    background-color: #ffa000;
+}
+
+/*Navigation bar active link*/
+li.myActive {
+    background-color: #ffa000;
+}
+li.myActive a {
+    color: #565656;
+}
+
+/* Text */
+.text-left {
+    text-align: left;
+}
+.subtitle {
+    margin: 10px;
+}
+.header {
+    font-weight: 300;
+}
+.indent {
+    text-indent: 1.5em;
+}
+.no-padding {
+    padding: 0;
+}
+.padding {
+    padding: 20px;
+}
+.card-head-title h4 {
+    font-weight: 300;
+    margin-top: 0px;
+}
+
+
+
+/* Courses */
+.course-number {
+    float: left;
+}
+.course-name {
+    float: left;
+    margin-left: 15px;
+}
+.course-name-short {
+    float: left;
+    margin-left: 15px;
+    display: none;
+}
+.collapsible-body {
+    background-color: #fafafa;
+    padding: 20px;
+}
+.collapsible-body p {
+    padding: 3px;
+}
+.course-title {
+    display: none;
+}
+.course-title p {
+    font-weight: 600;
+}
+@media only screen and (max-width: 500px) {
+    .course-name {
+        display: none;
+    }
+    .course-name-short {
+        display: block;
+    }
+    .course-title {
+        display: block;
+    }
+}
+
+
+/* Video Margin */
+video {
+    margin-bottom: 50px;
+}
+
+/* Page Title Flow Text*/
+@media only screen and (max-width: 1200px) {
+    .title-flow-text {
+        font-size: 42px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .title-flow-text {
+        font-size: 36px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .title-flow-text {
+        font-size: 24px;
+    }
+}
+
+/* Hide on large */
+@media only screen and (max-width: 1800px) and (min-width: 992px) {
+    .hide-on-only-large {
+        display: none;
+    }
+}
+
+/*Materialize icons*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/iconfont/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(../font/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(../font/iconfont/MaterialIcons-Regular.woff) format('woff'),
+       url(../font/iconfont/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/*Materialize add screen size*/
+/* Implement xl screen size */
+@media only screen and (min-width: 1800px) {
+    .row .col.xl1 {
+        width:8.33333%;
+        margin-left:0;
+    }
+
+    .row .col.xl2 {
+        width:16.66667%;
+        margin-left:0;
+    }
+
+    .row .col.xl3 {
+        width:25%;
+        margin-left:0;
+    }
+
+    .row .col.xl4 {
+        width:33.33333%;
+        margin-left:0;
+    }
+
+    .row .col.xl5 {
+        width:41.66667%;
+        margin-left:0;
+    }
+
+    .row .col.xl6 {
+        width:50%;
+        margin-left:0;
+    }
+
+    .row .col.xl7 {
+        width:58.33333%;
+        margin-left:0;
+    }
+
+    .row .col.xl8 {
+        width:66.66667%;
+        margin-left:0;
+    }
+
+    .row .col.xl9 {
+        width:75%;
+        margin-left:0;
+    }
+
+    .row .col.xl10 {
+        width:83.33333%;
+        margin-left:0;
+    }
+
+    .row .col.xl11 {
+        width:91.66667%;
+        margin-left:0;
+    }
+
+    .row .col.xl12 {
+        width:100%;
+        margin-left:0;
+    }
+
+    .row .col.offset-xl1 {
+        margin-left:8.33333%;
+    }
+
+    .row .col.offset-xl2 {
+        margin-left:16.66667%;
+    }
+
+    .row .col.offset-xl3 {
+        margin-left:25%;
+    }
+
+    .row .col.offset-xl4 {
+        margin-left:33.33333%;
+    }
+
+    .row .col.offset-xl5 {
+        margin-left:41.66667%;
+    }
+
+    .row .col.offset-xl6 {
+        margin-left:50%;
+    }
+
+    .row .col.offset-xl7 {
+        margin-left:58.33333%;
+    }
+
+    .row .col.offset-xl8 {
+        margin-left:66.66667%;
+    }
+
+    .row .col.offset-xl9 {
+        margin-left:75%;
+    }
+
+    .row .col.offset-xl10 {
+        margin-left:83.33333%;
+    }
+
+    .row .col.offset-xl11 {
+        margin-left:91.66667%;
+    }
+
+    .row .col.offset-xl12 {
+        margin-left:100%;
+    }
+}

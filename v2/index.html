@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Sander's Website</title>
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!--Import myStyle.css-->
+    <link type="text/css" rel="stylesheet" href="css/myStyle.css">
+    <!--Import more icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--Other meta tags-->
+    <meta name="keywords" content="CMU, Sander, Shi, Lanbo">
+    <meta name="description" content="Personal Website of Sander SHI, undergraduate in computer science at Carnegie Mellon University.">
+    <meta name="author" content="Sander SHI">
+  </head>
+  <body>
+    <!--Back to top anchor-->
+    <a name="top"></a>
+    <!--Navigation Bar-->
+    <nav class="grey darken-2 amber-text">
+      <div class="nav-wrapper amber-text">
+        <a href="index.html" class="brand-logo amber-text" style="padding-left: 20px;">Sander SHI</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons amber-text">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li class="myActive"><a href="index.html">Home</a></li>
+          <li><a href="biking.html">Bike Stunts</a></li>
+          <li><a href="cubing.html">Cubing</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="music.html">Music</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="biking.html">Bike Stunts</a></li>
+          <li><a href="cubing.html">Cubing</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="music.html">Music</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!--Page Content-->
+    <main>
+      <!--Parallax Picture-->
+      <div class="parallax-container">
+        <div class="container">
+          <br></br>
+          <div class="row">
+            <div class="col m5 s12">
+              <div class="profile-picture"></div>
+            </div>
+            <div class="col m7 s12 title-text">
+              <br class="hide-on-small-only">
+              <br class="hide-on-small-only">
+              <p class="grey-text text-lighten-2 flow-text ttext">
+                Carnegie Mellon University
+              </p>
+              <p class="grey-text text-lighten-2 flow-text ttext">
+                Undergraduate in Computer Science
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="parallax"><img src="src/mainbg.jpg"></div>
+      </div>
+      <!--Introduction-->
+      <div class="section white">
+        <div class="row container">
+          <h2 class="header amber-text text-darken-2">About Me</h2>
+          <p class="grey-text text-darken-3 flow-text indent">
+            Hi, my name is Lanbo Shi, but my friends call me <b>Sander</b>. I was born in Holland, grew up in Northern Ireland, 
+            completed my high school studies in Hangzhou, China, and am currently pursuing an undergraduate degree in 
+            Computer Science at Carnegie Mellon University. My interests range from music, sports and modern languages 
+            to website developing, and I have always been fascinated by software development and creating software that 
+            can be beneficial to our world.
+          </p>
+        </div>
+      </div>
+      <!--Keyboard Parallax-->
+      <div class="parallax-container my-parallax valign-wrapper">
+        <div class="container center valign">
+          <!--Get Resume Button-->
+          <a class="waves-effect waves-grey btn-large amber darken-3" href="src/files/resume.pdf">
+          <i class="fa fa-file left" aria-hidden="true"></i>
+          Resume
+          </a>
+        </div>
+        <div class="parallax"><img src="src/keyboard.jpg"></div>
+      </div>
+      <!--Portfolio-->
+      <div class="section amber darken-2">
+        <!--Cards Container-->
+        <div class="row container">
+          <h2 class="header white-text text-darken-1">My Projects</h2>
+          <!--Project Cards-->
+
+          <!--Project Card 4: SUMMIT Club Website-->
+          <div class="col xl3 l4 m6 s12">
+            <div class="card grey darken-1 small hoverable">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="src/summit.jpg">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator">
+                Club Website
+                <i class="material-icons right">more_vert</i>
+                </span>
+                <p>November, 2016</p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">
+                University Club Website
+                <i class="material-icons right">close</i>
+                </span>
+                <p class="indent">
+                  During the fall semester of 2016 I redesigned the club
+                  website for CMU Summit, and switched to use SCSS instead of 
+                  CSS to make it easier to maintain. Feel free to click
+                  <a href="https://www.cmu.edu/summit">here</a> to visit the site!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--Project Card 3: The Prophet -->
+          <div class="col xl3 l4 m6 s12">
+            <div class="card grey darken-1 small hoverable">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="src/wdc.jpg">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator">
+                The Prophet
+                <i class="material-icons right">more_vert</i>	
+                </span>
+                <p>January, 2016</p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">
+                The Prophet
+                <i class="material-icons right">close</i>
+                </span>
+                <span>-- Weather Data Collector</span>
+                <p class="indent">
+                  For "<a href="http://build18.org">Build18</a>," my team built a weather
+                  data collector using a customly designed PCB, a 
+                  Particle Photon board as well as other data collector modules. 
+                  The device would collect local weather data and push them to a database,
+                  from which our website would read the data.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--Project Card 2: Tartan Tag-->
+          <div class="col xl3 l4 m6 s12">
+            <div class="card grey darken-1 small hoverable">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="src/tt.jpg">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator">
+                Tartan Tag
+                <i class="material-icons right">more_vert</i>	
+                </span>
+                <p>September, 2015</p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">
+                Tartan Tag
+                <i class="material-icons right">close</i>
+                </span>
+                <p class="indent">
+                  During the "HackCMU" hackathon, my team built an Android game
+                  called "Tartan Tag" modeled after the game "Lazer Tag." We used an API
+                  that scanned barcodes, and each scan of a barcode of the other team would win 
+                  the current team points.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!--Project Card 1: The Social Hub-->
+          <div class="col xl3 l4 m6 s12 hide-on-only-large">
+            <div class="card grey darken-1 small hoverable">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="src/tsh.jpg">
+              </div>
+              <div class="card-content white-text">
+                <span class="card-title activator">
+                The Social Hub
+                <i class="material-icons right">more_vert</i>
+                </span>
+                <p>June, 2015</p>
+              </div>
+              <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">
+                The Social Hub
+                <i class="material-icons right">close</i>
+                </span>
+                <p class="indent">
+                  The Social Hub is a website that I made using ASP.Net. The website was intended
+                  for newly admitted CMU students to connect with each other, 
+                  and find future classmates by school or major. Click 
+                  <a href="http://sandershihacker.w232.mc-test.com">here</a> to visit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!--Link to portfolio page-->
+        <div class="container center">
+          <a class="waves-effect waves-grey btn grey darken-1" href="projects.html">
+          <i class="fa fa-tasks left" aria-hidden="true"></i>
+          See More
+          </a>
+          <br><br>
+        </div>
+      </div>
+      <!--Go to top button-->
+      <div class="fixed-action-btn" style="bottom: 24px; right: 24px;">
+        <a class="btn-floating btn-medium amber darken-2" href="#top">
+        <i class="material-icons">keyboard_arrow_up</i>
+        </a>
+      </div>
+    </main>
+    <!--Footer-->
+    <footer class="page-footer grey darken-2" style="margin-top: 0px;">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12 m6">
+            <h5 class="white-text">Contact me</h5>
+            <p>
+              <a href="https://www.linkedin.com/in/sander-shi-063929b9" class="white-text">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+              Linkedin
+              </a>
+            </p>
+            <p>
+              <a href="https://github.com/sandershihacker" class="white-text">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              Github
+              </a>
+            </p>
+            <p>
+              <a href="https://www.facebook.com/sandershihacker" class="white-text">
+              <i class="fa fa-facebook-official" aria-hidden="true"></i>
+              Facebook
+              </a>
+            </p>
+            <p>
+              <a href="mailto:sander.hacker@hotmail.com" class="white-text">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              Email
+              </a>
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12 m4 offset-m2">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="http://www.cmu.edu">My University</a></li>
+              <li><a class="grey-text text-lighten-3" href="courses.html">My Coursework</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright grey darken-3">
+        <div class="container amber-text text-darken-2">
+          Sander Lanbo SHI &copy; 2017
+          <a class="right amber-text text-darken-3">Made using Materialize</a>
+        </div>
+      </div>
+    </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+  </body>
+</html>
