@@ -42,6 +42,7 @@ html {
   width: 100%;
   position: relative;
   background-image: url("../src/portrait.jpg");
+  background-position: center;
   background-size: cover; }
   #landing-page .image-overlay {
     position: absolute;
@@ -89,22 +90,24 @@ html {
       #landing-page .landing-page-content .scrolled-navbar a:hover {
         color: #7f8c8d;
         background-color: transparent; }
-    #landing-page .landing-page-content .landing-page-text h1 {
-      font-size: 70px;
-      font-weight: bold; }
-    #landing-page .landing-page-content .landing-page-text p {
-      font-size: 35px;
-      color: #7f8c8d; }
-    #landing-page .landing-page-content .landing-page-text .icons {
-      color: #000000; }
-      #landing-page .landing-page-content .landing-page-text .icons a {
-        margin: 30px;
-        text-decoration: none;
-        color: #000000;
-        transition-duration: 0.3s; }
-      #landing-page .landing-page-content .landing-page-text .icons a:hover {
-        color: #7f8c8d;
-        transition-duration: 0.3s; }
+    #landing-page .landing-page-content .landing-page-text {
+      max-width: 950px; }
+      #landing-page .landing-page-content .landing-page-text h1 {
+        font-size: 70px;
+        font-weight: bold; }
+      #landing-page .landing-page-content .landing-page-text p {
+        font-size: 35px;
+        color: #7f8c8d; }
+      #landing-page .landing-page-content .landing-page-text .icons {
+        color: #000000; }
+        #landing-page .landing-page-content .landing-page-text .icons a {
+          margin: 30px;
+          text-decoration: none;
+          color: #000000;
+          transition-duration: 0.3s; }
+        #landing-page .landing-page-content .landing-page-text .icons a:hover {
+          color: #7f8c8d;
+          transition-duration: 0.3s; }
     #landing-page .landing-page-content .name {
       color: #1abc9c; }
     #landing-page .landing-page-content .more-arrow {
@@ -131,5 +134,26 @@ html {
     padding-top: 60px;
     padding-bottom: 60px;
     background-color: #1abc9c; }
+
+@media screen and (max-width: 1124px) {
+  #landing-page {
+    background-image: url("../src/portrait-mobile.jpg"); }
+    #landing-page .landing-page-content .landing-page-text {
+      max-width: 600px; }
+      #landing-page .landing-page-content .landing-page-text p {
+        font-size: 25px; }
+      #landing-page .landing-page-content .landing-page-text .icons a {
+        margin: 20px;
+        font-size: 35px; } }
+@media screen and (max-width: 650px) {
+  #landing-page .landing-page-content .landing-page-text {
+    max-width: 600px; }
+    #landing-page .landing-page-content .landing-page-text h1 {
+      font-size: 50px; }
+    #landing-page .landing-page-content .landing-page-text p {
+      font-size: 20px; }
+    #landing-page .landing-page-content .landing-page-text .icons a {
+      margin: 10px;
+      font-size: 25px; } }
 
 /*# sourceMappingURL=main.css.map */
