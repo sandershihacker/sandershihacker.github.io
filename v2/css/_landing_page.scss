@@ -1,0 +1,154 @@
+/*
+ * File: _landing_page.scss
+ * Description: This is the stylesheet for the landing page section.
+ * Author: Sander Shi.
+ */
+
+// Keyframes
+@-webkit-keyframes more-arrow {
+    0%      {bottom: 10px; opacity: 0;}
+    100%    {bottom: -10px; opacity: 1;}
+}
+
+@keyframes more-arrow {
+    0%      {bottom: 10px; opacity: 0;}
+    100%    {bottom: -10px; opacity: 1;}
+}
+
+// Main
+#landing-page {
+    @include page-section();
+    .landing-page-content {
+        height: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        .navbar {
+            @include fix-top-left();
+            width: 100%;
+            display: inline-block;
+            transition-duration: 0.3s;
+            font-size: 16px;
+            a {
+                margin: 0;
+                padding: 6px;
+                border-radius: 4px;
+                color: $navbar-color;
+                font-weight: bold;
+                border: none;
+                cursor: pointer;
+                transition-duration: 0.3s;
+            }
+            a:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+                transition-duration: 0.3s;
+            }
+            a.menu-button {
+                float: right;
+            }
+            a.logo {
+                float: left;
+                display: none;
+            }
+        }
+        .scrolled-navbar {
+            background-color: $navbar-color;
+            transition-duration: 0.3s;
+            a {
+                color: $landing-page-color;
+            }
+            a:hover {
+                color: $short-descript-color;
+                background-color: transparent;
+            }
+            a.logo {
+                display: block;
+            }
+        }
+        .landing-page-text {
+            max-width: 950px;
+            h1 {
+                font-size: 70px;
+                font-weight: bold;
+            }
+            p {
+                font-size: 35px;
+                color: $short-descript-color;
+            }
+            .icons {
+                color: $icon-color;
+                a {
+                    margin: 30px;
+                    font-size: 40px;
+                    color: $icon-color;
+                    transition-duration: 0.3s;
+                }
+                a:hover {
+                    color: $short-descript-color;
+                    transition-duration: 0.3s;
+                }
+            }
+        }
+        .name {
+            color: $theme-color;
+        }
+        .more-arrow {
+            position: absolute;
+            bottom: 30px;
+            a {
+                color: $icon-color;
+                p {
+                    margin: 0;
+                    padding: 5px;
+                }
+                svg {
+                    position: relative;
+                    animation: more-arrow 2s infinite;
+                    -webkit-animation: more-arrow 2s infinite;
+                }
+            }
+        }
+    }
+}
+
+// Media Queries
+@media screen and (max-width: $large-screen) {
+   #landing-page {
+       .landing-page-content {
+           .landing-page-text {
+           max-width: 600px;
+           p {
+           font-size: 25px;
+           }
+           .icons {
+               a {
+               margin: 20px;
+               font-size: 40px;
+               }
+               }
+           }
+       }
+   }
+}
+
+@media screen and (max-width: $medium-screen) {
+    #landing-page {
+        .landing-page-content {
+            .landing-page-text {
+                max-width: 600px;
+                h1 {
+                    font-size: 50px;
+                }
+                p {
+                    font-size: 20px;
+                }
+                .icons {
+                    a {
+                        margin: 10px;
+                        font-size: 25px;
+                    }
+                }
+            }
+        }
+    }
+}

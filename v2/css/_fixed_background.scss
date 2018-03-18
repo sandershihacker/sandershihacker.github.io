@@ -1,0 +1,26 @@
+/*
+ * File: _fixed_background.scss
+ * Description: The style for fixing the background.
+ * Author: Sander Shi.
+ */
+
+// Main
+.fixed-background {
+    @include fixed-background();
+    background-image: $portrait-location;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    .fixed-background-overlay {
+        @include fixed-background();
+        background-color: $landing-page-color;
+        opacity: 1;
+    }
+}
+
+// Responsive
+@media screen and (max-width: $large-screen) {
+    .fixed-background {
+        background-image: $portrait-mobile-location;
+    }
+}

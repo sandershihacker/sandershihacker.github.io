@@ -3,22 +3,13 @@
  * Description: The main stylesheet for Sander's personal website.
  * Author: Sander Shi.
  */
+/*
+ * File: _base.scss
+ * Description: The basics for the style.
+ * Author: Sander Shi.
+ */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 @import url(./bootstrap.min.css);
-@-webkit-keyframes more-arrow {
-  0% {
-    bottom: 10px;
-    opacity: 0; }
-  100% {
-    bottom: -20px;
-    opacity: 1; } }
-@keyframes more-arrow {
-  0% {
-    bottom: 10px;
-    opacity: 0; }
-  100% {
-    bottom: -20px;
-    opacity: 1; } }
 html {
   font-size: 16px; }
   @media screen and (min-width: 320px) {
@@ -32,32 +23,72 @@ html {
   margin: 0;
   font-family: 'Open Sans', sans-serif; }
 
+a, a:visited {
+  text-decoration: none;
+  color: #7f8c8d;
+  transition-duration: 0.3s; }
+
+a:hover {
+  text-decoration: none;
+  font-weight: bold;
+  transition-duration: 0.3s; }
+
 .container {
   max-width: 1260px;
   padding-left: 20px;
   padding-right: 20px; }
 
-#landing-page {
+/*
+ * File: _fixed_background.scss
+ * Description: The style for fixing the background.
+ * Author: Sander Shi.
+ */
+.fixed-background {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
-  position: relative;
   background-image: url("../src/portrait.jpg");
   background-position: center;
-  background-size: cover; }
-  #landing-page .image-overlay {
-    position: absolute;
-    left: 0;
+  background-size: cover;
+  z-index: -1; }
+  .fixed-background .fixed-background-overlay {
+    position: fixed;
     top: 0;
-    height: 100%;
+    left: 0;
+    height: 100vh;
     width: 100%;
-    background-color: white;
+    background-color: #efefef;
     opacity: 1; }
+
+@media screen and (max-width: 1124px) {
+  .fixed-background {
+    background-image: url("../src/portrait-mobile.jpg"); } }
+/*
+ * File: _landing_page.scss
+ * Description: This is the stylesheet for the landing page section.
+ * Author: Sander Shi.
+ */
+@-webkit-keyframes more-arrow {
+  0% {
+    bottom: 10px;
+    opacity: 0; }
+  100% {
+    bottom: -10px;
+    opacity: 1; } }
+@keyframes more-arrow {
+  0% {
+    bottom: 10px;
+    opacity: 0; }
+  100% {
+    bottom: -10px;
+    opacity: 1; } }
+#landing-page {
+  height: 100vh;
+  width: 100%; }
   #landing-page .landing-page-content {
-    position: absolute;
-    left: 0;
-    top: 0;
     height: 100%;
-    width: 100%;
     display: none;
     align-items: center;
     justify-content: center; }
@@ -70,26 +101,32 @@ html {
       transition-duration: 0.3s;
       font-size: 16px; }
       #landing-page .landing-page-content .navbar a {
-        text-decoration: none;
-        color: rgba(0, 0, 0, 0.8);
-        float: right;
-        font-weight: bold;
-        border: none;
+        margin: 0;
         padding: 6px;
         border-radius: 4px;
+        color: rgba(0, 0, 0, 0.8);
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
         transition-duration: 0.3s; }
       #landing-page .landing-page-content .navbar a:hover {
         background-color: rgba(0, 0, 0, 0.3);
-        transition-duration: 0.3s;
-        cursor: pointer; }
+        transition-duration: 0.3s; }
+      #landing-page .landing-page-content .navbar a.menu-button {
+        float: right; }
+      #landing-page .landing-page-content .navbar a.logo {
+        float: left;
+        display: none; }
     #landing-page .landing-page-content .scrolled-navbar {
       background-color: rgba(0, 0, 0, 0.8);
       transition-duration: 0.3s; }
       #landing-page .landing-page-content .scrolled-navbar a {
-        color: white; }
+        color: #efefef; }
       #landing-page .landing-page-content .scrolled-navbar a:hover {
         color: #7f8c8d;
         background-color: transparent; }
+      #landing-page .landing-page-content .scrolled-navbar a.logo {
+        display: block; }
     #landing-page .landing-page-content .landing-page-text {
       max-width: 950px; }
       #landing-page .landing-page-content .landing-page-text h1 {
@@ -102,7 +139,7 @@ html {
         color: #000000; }
         #landing-page .landing-page-content .landing-page-text .icons a {
           margin: 30px;
-          text-decoration: none;
+          font-size: 40px;
           color: #000000;
           transition-duration: 0.3s; }
         #landing-page .landing-page-content .landing-page-text .icons a:hover {
@@ -112,9 +149,8 @@ html {
       color: #1abc9c; }
     #landing-page .landing-page-content .more-arrow {
       position: absolute;
-      bottom: 20px; }
+      bottom: 30px; }
       #landing-page .landing-page-content .more-arrow a {
-        text-decoration: none;
         color: #000000; }
         #landing-page .landing-page-content .more-arrow a p {
           margin: 0;
@@ -124,27 +160,14 @@ html {
           animation: more-arrow 2s infinite;
           -webkit-animation: more-arrow 2s infinite; }
 
-#about-me {
-  height: 100vh;
-  width: 100%;
-  background-color: #16a085;
-  color: white; }
-  #about-me .about-me-content {
-    width: 100%;
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: #1abc9c; }
-
 @media screen and (max-width: 1124px) {
-  #landing-page {
-    background-image: url("../src/portrait-mobile.jpg"); }
-    #landing-page .landing-page-content .landing-page-text {
-      max-width: 600px; }
-      #landing-page .landing-page-content .landing-page-text p {
-        font-size: 25px; }
-      #landing-page .landing-page-content .landing-page-text .icons a {
-        margin: 20px;
-        font-size: 35px; } }
+  #landing-page .landing-page-content .landing-page-text {
+    max-width: 600px; }
+    #landing-page .landing-page-content .landing-page-text p {
+      font-size: 25px; }
+    #landing-page .landing-page-content .landing-page-text .icons a {
+      margin: 20px;
+      font-size: 40px; } }
 @media screen and (max-width: 650px) {
   #landing-page .landing-page-content .landing-page-text {
     max-width: 600px; }
@@ -155,5 +178,50 @@ html {
     #landing-page .landing-page-content .landing-page-text .icons a {
       margin: 10px;
       font-size: 25px; } }
+/*
+ * File: _about_section.scss
+ * Description: The stylesheet for the about me section.
+ * Author: Sander Shi.
+ */
+#about-me {
+  background-color: white;
+  color: #efefef; }
+  #about-me .about-me-content {
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #1abc9c;
+    opacity: 0; }
+    #about-me .about-me-content h2 {
+      text-align: center;
+      padding: 10px;
+      border-bottom: solid 2px white; }
+  #about-me .hobbies-content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    opacity: 0; }
+    #about-me .hobbies-content .row {
+      justify-content: space-between; }
+    #about-me .hobbies-content .hobby {
+      width: 350px;
+      color: #afafaf;
+      font-size: 20px;
+      padding: 20px; }
+      #about-me .hobbies-content .hobby h1 {
+        text-align: center;
+        font-size: 70px;
+        color: #1abc9c; }
+      #about-me .hobbies-content .hobby hr {
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto; }
+      #about-me .hobbies-content .hobby p {
+        text-align: center; }
+
+@media screen and (max-width: 1124px) {
+  #about-me .hobbies-content .row {
+    justify-content: center; }
+  #about-me .hobbies-content .hobby {
+    width: 600px; } }
 
 /*# sourceMappingURL=main.css.map */
