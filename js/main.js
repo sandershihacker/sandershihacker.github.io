@@ -11,6 +11,7 @@ $(document).ready(function() {
     $(".navbar").delay(1600).hide().fadeIn(1000);
 
     // Scrolling Changes
+    $(".navbar").css("transition-duration", "0.3s").toggleClass("scrolled-navbar", $(this).scrollTop() > 20);
     $(document).scroll(function() {
         // Show Navigation Bar
         $(".navbar").css("transition-duration", "0.3s").toggleClass("scrolled-navbar", $(this).scrollTop() > 20);
@@ -18,14 +19,24 @@ $(document).ready(function() {
         // Fade-in Text
         var $about = $(".about-me-content");
         var $hobbies = $(".hobbies-content");
+        var $projects = $(".projects-content");
+        var $contact = $(".contact");
         var bottom_of_about = $about.offset().top + 200;
         var bottom_of_hobbies = $hobbies.offset().top + 200;
+        var bottom_of_projects = $projects.offset().top + 200;
+        var bottom_of_contact = $contact.offset().top + 200;
         var bottom_of_window = $(window).scrollTop() + $(window).height();
         if (bottom_of_window > bottom_of_about) {
             $about.animate({opacity: 1}, 800);
         }
         if (bottom_of_window > bottom_of_hobbies) {
             $hobbies.animate({opacity: 1}, 800);
+        }
+        if (bottom_of_window > bottom_of_projects) {
+            $projects.animate({opacity: 1}, 800);
+        }
+        if (bottom_of_window > bottom_of_contact) {
+            $contact.animate({opacity: 1}, 800);
         }
     });
 

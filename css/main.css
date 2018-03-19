@@ -30,7 +30,7 @@ a, a:visited {
 
 a:hover {
   text-decoration: none;
-  font-weight: bold;
+  color: #101010;
   transition-duration: 0.3s; }
 
 .container {
@@ -212,6 +212,8 @@ a:hover {
           position: relative;
           animation: more-arrow 2s infinite;
           -webkit-animation: more-arrow 2s infinite; }
+      #landing-page .landing-page-content .more-arrow a:hover {
+        color: gray; }
 
 @media screen and (max-width: 1124px) {
   #landing-page .landing-page-content .landing-page-text {
@@ -282,16 +284,25 @@ a:hover {
   height: 100%;
   background-color: #1abc9c;
   color: #efefef; }
-  #projects .projects-content h2 {
-    text-align: center; }
-  #projects .projects-content hr {
-    margin: 40px; }
-  #projects .projects-content .card-columns .card {
-    color: #808080; }
-    #projects .projects-content .card-columns .card .card-footer {
-      text-align: left; }
-    #projects .projects-content .card-columns .card p {
-      font-size: 20px; }
+  #projects .projects-content {
+    opacity: 0; }
+    #projects .projects-content h2 {
+      text-align: center; }
+    #projects .projects-content hr {
+      margin: 40px; }
+    #projects .projects-content .card-columns .card {
+      color: #808080; }
+      #projects .projects-content .card-columns .card .card-footer {
+        text-align: left; }
+      #projects .projects-content .card-columns .card p {
+        font-size: 20px; }
+      #projects .projects-content .card-columns .card .link-section {
+        padding-top: 0; }
+      #projects .projects-content .card-columns .card a.card-link {
+        font-size: 20px;
+        color: #1abc9c; }
+      #projects .projects-content .card-columns .card a.card-link:hover {
+        color: #808080; }
 
 /*
  * File: _contact.scss
@@ -302,7 +313,10 @@ a:hover {
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-  color: #efefef; }
+  color: #efefef;
+  display: flex;
+  align-items: center;
+  opacity: 0; }
   .contact hr {
     margin: 40px; }
   .contact h2 {
@@ -316,7 +330,9 @@ a:hover {
       color: #efefef;
       border: solid 3px #efefef;
       margin-bottom: 25px;
-      width: 100%; }
+      width: 100%;
+      padding: 5px;
+      border-radius: 4px; }
     .contact .form-container form input[type=submit] {
       cursor: pointer;
       transition-duration: 0.3s; }
@@ -327,7 +343,9 @@ a:hover {
       height: 250px;
       max-height: 280px; }
     .contact .form-container form textarea:focus, .contact .form-container form input:focus {
-      outline: none; }
+      outline: none;
+      background-color: rgba(255, 255, 255, 0.1);
+      transition-duration: 0.3s; }
     .contact .form-container form ::placeholder {
       /* Chrome, Firefox, Opera, Safari 10.1+ */
       color: #afafaf;
@@ -352,7 +370,7 @@ a:hover {
   width: 100%;
   height: 100px;
   background-color: rgba(0, 0, 0, 0.8);
-  color: #efefef; }
+  color: #808080; }
   .footer p {
     line-height: 100px;
     margin: 0;

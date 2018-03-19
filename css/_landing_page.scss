@@ -65,6 +65,9 @@
                     -webkit-animation: more-arrow 2s infinite;
                 }
             }
+            a:hover {
+                color: lighten($icon-color, 50%);
+            }
         }
     }
 }
@@ -74,15 +77,15 @@
    #landing-page {
        .landing-page-content {
            .landing-page-text {
-           max-width: 600px;
-           p {
-           font-size: 25px;
-           }
-           .icons {
-               a {
-               margin: 20px;
-               font-size: 40px;
+               max-width: 600px;
+               p {
+               font-size: 25px;
                }
+               .icons {
+                   a {
+                       margin: 20px;
+                       font-size: 40px;
+                   }
                }
            }
        }

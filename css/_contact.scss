@@ -9,6 +9,9 @@
     @include page-section();
     background-color: $contact-color;
     color: $landing-page-color;
+    display: flex;
+    align-items: center;
+    opacity: 0;
     hr {
         margin: 40px;
     }
@@ -26,6 +29,8 @@
                 border: solid 3px $landing-page-color;
                 margin-bottom: 25px;
                 width: 100%;
+                padding: 5px;
+                border-radius: 4px;
             }
             input[type=submit] {
                 cursor: pointer;
@@ -41,6 +46,8 @@
             }
             textarea:focus, input:focus{
                 outline: none;
+                background-color: rgba(255, 255, 255, 0.1);
+                transition-duration: 0.3s;
             }
             ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
                 color: #afafaf;
