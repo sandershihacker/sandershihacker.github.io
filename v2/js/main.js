@@ -8,11 +8,12 @@ $(document).ready(function() {
     // Initial Animations
     $(".fixed-background-overlay").delay(800).animate({"opacity": "0.75"}, 800);
     $(".landing-page-content").css("display", "flex").hide().delay(1600).fadeIn(1200);
+    $(".navbar").delay(1600).hide().fadeIn(1000);
 
     // Scrolling Changes
     $(document).scroll(function() {
         // Show Navigation Bar
-        $(".navbar").toggleClass("scrolled-navbar", $(this).scrollTop() > 20);
+        $(".navbar").css("transition-duration", "0.3s").toggleClass("scrolled-navbar", $(this).scrollTop() > 20);
 
         // Fade-in Text
         var $about = $(".about-me-content");
@@ -36,4 +37,24 @@ $(document).ready(function() {
         }, 500);
         return false;
     })
+
+    // Navigation Bar
+    var $nav = $("#nav-menu");
+    var $canvas = $("#canvas");
+    $nav.hide();
+    $canvas.hide();
+    $(".menu-button").click(function() {
+        $nav.fadeIn(300);
+        $canvas.fadeIn(300);
+    });
+    function closeNav() {
+        $nav.fadeOut(300);
+        $canvas.fadeOut(300);
+    }
+    $canvas.click(function() {
+        closeNav();
+    });
+    $(".nav-link").click(function() {
+        closeNav();
+    });
 });

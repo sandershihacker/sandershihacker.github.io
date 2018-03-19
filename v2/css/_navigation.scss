@@ -1,0 +1,99 @@
+/*
+ * File: _navigation.scss
+ * Description: The stylesheet for the navigation menu.
+ * Author: Sander Shi.
+ */
+
+// Main
+#nav-menu {
+    background-color: $sidenav-color;
+    width: 500px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    color: $short-descript-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .nav-links {
+        padding: 10px;
+        .nav-link {
+            margin: 10px;
+        }
+        a:hover {
+            font-weight: normal;
+            color: $landing-page-color;
+        }
+    }
+    .close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        font-size: 35px;
+    }
+    a.close-button:hover {
+        transform: rotate(90deg);
+    }
+}
+#canvas{
+    @include fix-top-left();
+    @include page-section();
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+}
+.navbar {
+    @include fix-top-left();
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    a {
+        margin: 0;
+        padding: 6px;
+        border-radius: 4px;
+        color: $navbar-color;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        transition-duration: 0.3s;
+    }
+    a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+        transition-duration: 0.3s;
+    }
+    a.menu-button {
+        float: right;
+    }
+    a.logo {
+        float: left;
+        display: none;
+    }
+}
+.scrolled-navbar {
+    background-color: $navbar-color;
+    a {
+        color: $landing-page-color;
+    }
+    a:hover {
+        color: $short-descript-color;
+        background-color: transparent;
+    }
+    a.menu-button {
+        color: $landing-page-color;
+    }
+    a.menu-button:hover {
+        color: $short-descript-color;
+    }
+    a.logo {
+        display: block;
+    }
+}
+
+// Responsive
+@media screen and (max-width: $medium-screen) {
+    #nav-menu {
+        width: 100%;
+    }
+}

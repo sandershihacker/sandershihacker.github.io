@@ -23,48 +23,6 @@
         display: none;
         align-items: center;
         justify-content: center;
-        .navbar {
-            @include fix-top-left();
-            width: 100%;
-            display: inline-block;
-            transition-duration: 0.3s;
-            font-size: 16px;
-            a {
-                margin: 0;
-                padding: 6px;
-                border-radius: 4px;
-                color: $navbar-color;
-                font-weight: bold;
-                border: none;
-                cursor: pointer;
-                transition-duration: 0.3s;
-            }
-            a:hover {
-                background-color: rgba(0, 0, 0, 0.3);
-                transition-duration: 0.3s;
-            }
-            a.menu-button {
-                float: right;
-            }
-            a.logo {
-                float: left;
-                display: none;
-            }
-        }
-        .scrolled-navbar {
-            background-color: $navbar-color;
-            transition-duration: 0.3s;
-            a {
-                color: $landing-page-color;
-            }
-            a:hover {
-                color: $short-descript-color;
-                background-color: transparent;
-            }
-            a.logo {
-                display: block;
-            }
-        }
         .landing-page-text {
             max-width: 950px;
             h1 {
