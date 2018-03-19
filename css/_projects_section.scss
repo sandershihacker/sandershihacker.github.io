@@ -1,0 +1,32 @@
+/*
+ * File: _projects_section.scss
+ * Description: The stylesheet for the projects section.
+ * Author: Sander Shi.
+ */
+
+// Main
+#projects {
+    @include page-section();
+    height: 100%;
+    background-color: $project-color;
+    color: $landing-page-color;
+    .projects-content {
+        h2 {
+            text-align: center;
+        }
+        hr {
+            margin: 40px;
+        }
+        .card-columns {
+            .card {
+                color: $grey-text-color;
+                .card-footer {
+                    text-align: left;
+                }
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+/*
+ * File: _base.scss
+ * Description: The basics for the style.
+ * Author: Sander Shi.
+ */
+
+// Imports
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800');
+@import "./bootstrap.min.css";
+
+// Variables
+$landing-page-color: #efefef;
+$theme-color: #1abc9c;
+$icon-color: #000000;
+$navbar-color: rgba(0, 0, 0, 0.8);
+$sidenav-color: #101010;
+$short-descript-color: #7f8c8d;
+$about-me-color-2: white;
+$project-color: $theme-color;
+$contact-color: rgba(0, 0, 0, 0.5);
+$grey-text-color: #808080;
+$footer-color: $navbar-color;
+
+$large-screen: 1124px;
+$medium-screen: 650px;
+
+$portrait-location: url("../src/portrait.jpg");
+$portrait-mobile-location: url("../src/portrait-mobile.jpg");
+
+// Mixins
+@mixin page-section() {
+    height: 100vh;
+    width: 100%;
+}
+
+@mixin fix-top-left() {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@mixin fixed-background() {
+    @include fix-top-left();
+    @include page-section();
+}
+
+// Responsive Text
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
+html {
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+}
+
+// Helpers and Defaults
+* {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: $short-descript-color;
+    transition-duration: 0.3s;
+}
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.3s;
+}
+
+.container {
+    max-width: 1260px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}

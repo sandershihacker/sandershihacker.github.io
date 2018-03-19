@@ -1,0 +1,67 @@
+/*
+ * File: _contact.scss
+ * Description: The stylesheet for contact me section.
+ * Author: Sander Shi.
+ */
+
+// Main
+.contact {
+    @include page-section();
+    background-color: $contact-color;
+    color: $landing-page-color;
+    hr {
+        margin: 40px;
+    }
+    h2 {
+        text-align: center;
+    }
+    .form-container {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+        form {
+            input[type=text], input[type=email], textarea, input[type=submit] {
+                background-color: transparent;
+                color: $landing-page-color;
+                border: solid 3px $landing-page-color;
+                margin-bottom: 25px;
+                width: 100%;
+            }
+            input[type=submit] {
+                cursor: pointer;
+                transition-duration: 0.3s;
+            }
+            input[type=submit]:hover {
+                background-color: $theme-color;
+                transition-duration: 0.3s;
+            }
+            textarea {
+                height: 250px;
+                max-height: 280px;
+            }
+            textarea:focus, input:focus{
+                outline: none;
+            }
+            ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: #afafaf;
+                opacity: 1; /* Firefox */
+            }
+
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+                color: #afafaf;
+            }
+
+            ::-ms-input-placeholder { /* Microsoft Edge */
+                color: #afafaf;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $medium-screen) {
+    .contact {
+        .form-container {
+            width: 100%;
+        }
+    }
+}

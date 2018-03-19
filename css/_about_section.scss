@@ -1,0 +1,59 @@
+/*
+ * File: _about_section.scss
+ * Description: The stylesheet for the about me section.
+ * Author: Sander Shi.
+ */
+
+// Main
+#about-me {
+    background-color: $landing-page-color;
+    color: $landing-page-color;
+    .about-me-content {
+        width: 100%;
+        background-color: $theme-color;
+        opacity: 0;
+        h2 {
+            text-align: center;
+            padding: 10px;
+        }
+    }
+    .hobbies-content {
+        opacity: 0;
+        .row {
+            justify-content: space-between;
+        }
+        .hobby {
+            width: 350px;
+            color: $grey-text-color;
+            font-size: 20px;
+            padding: 20px;
+            h1 {
+                text-align: center;
+                font-size: 70px;
+                color: $theme-color;
+            }
+            hr {
+                width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+// Media Queries
+@media screen and (max-width: $large-screen) {
+    #about-me {
+        .hobbies-content {
+            .row {
+                justify-content: center;
+            }
+            .hobby {
+                width: 600px;
+            }
+        }
+    }
+}
