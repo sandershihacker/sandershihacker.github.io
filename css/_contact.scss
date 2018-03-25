@@ -24,13 +24,15 @@
         margin-right: auto;
         form {
             input[type=text], input[type=email], textarea, input[type=submit] {
-                background-color: transparent;
+                background-color: $input-color;
                 color: $landing-page-color;
-                border: solid 3px $landing-page-color;
+                border: 0;
                 margin-bottom: 25px;
                 width: 100%;
-                padding: 5px;
-                border-radius: 4px;
+                padding: 8px;
+                border-radius: 2px;
+                transition-duration: 0.3s;
+                font-size: 20px;
             }
             input[type=submit] {
                 cursor: pointer;
@@ -41,25 +43,24 @@
                 transition-duration: 0.3s;
             }
             textarea {
-                height: 250px;
+                height: 220px;
                 max-height: 280px;
             }
             textarea:focus, input:focus{
                 outline: none;
-                background-color: rgba(255, 255, 255, 0.1);
-                transition-duration: 0.3s;
+                background-color: darken($input-color, 25);
             }
             ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-                color: #afafaf;
+                color: $grey-text-color;
                 opacity: 1; /* Firefox */
             }
 
             :-ms-input-placeholder { /* Internet Explorer 10-11 */
-                color: #afafaf;
+                color: $grey-text-color;
             }
 
             ::-ms-input-placeholder { /* Microsoft Edge */
-                color: #afafaf;
+                color: $grey-text-color;
             }
         }
     }
