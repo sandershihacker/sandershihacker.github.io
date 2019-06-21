@@ -62,7 +62,7 @@
         transition-duration: 0.3s;
     }
     a:hover {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.1);
         transition-duration: 0.3s;
     }
     a.menu-button {
@@ -70,26 +70,6 @@
     }
     a.logo {
         float: left;
-        display: none;
-    }
-}
-.scrolled-navbar {
-    background-color: $navbar-color;
-    a {
-        color: $landing-page-color;
-    }
-    a:hover {
-        color: $short-descript-color;
-        background-color: transparent;
-    }
-    a.menu-button {
-        color: $landing-page-color;
-    }
-    a.menu-button:hover {
-        color: $short-descript-color;
-    }
-    a.logo {
-        display: block;
     }
 }
 

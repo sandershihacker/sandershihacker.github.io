@@ -150,27 +150,12 @@ a:hover {
     cursor: pointer;
     transition-duration: 0.3s; }
   .navbar a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     transition-duration: 0.3s; }
   .navbar a.menu-button {
     float: right; }
   .navbar a.logo {
-    float: left;
-    display: none; }
-
-.scrolled-navbar {
-  background-color: rgba(0, 0, 0, 0.8); }
-  .scrolled-navbar a {
-    color: #efefef; }
-  .scrolled-navbar a:hover {
-    color: #7f8c8d;
-    background-color: transparent; }
-  .scrolled-navbar a.menu-button {
-    color: #efefef; }
-  .scrolled-navbar a.menu-button:hover {
-    color: #7f8c8d; }
-  .scrolled-navbar a.logo {
-    display: block; }
+    float: left; }
 
 @media screen and (max-width: 650px) {
   #nav-menu {
