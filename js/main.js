@@ -38,4 +38,14 @@ $(document).ready(function () {
     $(".nav-link").click(function () {
         closeNav();
     });
+
+    // Learn More
+    var $learnMore = $("#learn-more");
+    $learnMore.hide();
+    $(".learn-more-button").click(function () {
+        $learnMore.fadeIn(300);
+    });
+    $(".learn-more-close").click(function () {
+        $learnMore.fadeOut(300);
+    });
 });

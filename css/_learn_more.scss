@@ -1,0 +1,32 @@
+/*
+ * File: _learn_more.scss
+ * Description: The stylesheet for the learn more section.
+ * Author: Sander Shi.
+ */
+
+// Main
+#learn-more {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    .learn-more-content {
+        width: 100%;
+        height: 100%;
+        background-color: $sidenav-color;
+        padding: 50px;
+        a.learn-more-close {
+            float: right;
+            cursor: pointer;
+        }
+        a.learn-more-close:hover {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+
+// Responsive
+@media screen and (max-width: $large-screen) {
+}
